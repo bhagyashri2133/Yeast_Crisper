@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 # Load lookup table
-df = pd.read_csv("grna_risk_lookup.csv")
+df = pd.read_csv("grna_risk_lookup.csv.gz")
 
 lookup = dict(zip(df["gRNA"], df["risk_level"]))
 
