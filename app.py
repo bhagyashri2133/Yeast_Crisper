@@ -65,7 +65,7 @@ This web tool helps identify potential **CRISPR guide RNA (gRNA)** sequences fro
 A **gRNA** is a short 20-base DNA sequence used in CRISPR experiments to guide the Cas9 enzyme to a specific location in the genome.
 
 ### How it works
-1. Paste a **DNA sequence** into the input box below.
+1. Paste a **gRNA sequence** into the input box below.
 2. The tool scans the sequence and extracts all possible **20-bp gRNA candidates**.
 3. Each candidate is compared with a **precomputed dataset (~893k gRNAs)**.
 4. The tool predicts the **off-target risk level**:
