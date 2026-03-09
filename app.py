@@ -72,7 +72,7 @@ st.divider()
 
 # ---------- DNA Input ----------
 dna_seq = st.text_area(
-    "Paste DNA Sequence",
+    "Enter gRNA Sequence",
     height=220,
     placeholder="ATGCGTACGTAGCTAGCTAGCTAGCTAG..."
 )
