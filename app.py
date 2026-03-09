@@ -57,16 +57,29 @@ lookup = dict(zip(df["gRNA"], df["risk_level"]))
 
 # ---------- Title ----------
 st.title("🧬 Yeast CRISPR gRNA Off-Target Risk Predictor")
-
 st.markdown("""
-<center>
+### About This Tool
 
-Analyze **DNA sequences** and identify potential **20-bp CRISPR gRNA candidates**  
-for **Saccharomyces cerevisiae** and estimate their **off-target risk level**.
+This web tool helps identify potential **CRISPR guide RNA (gRNA)** sequences from a given **DNA sequence** and predicts their **off-target risk level** for the yeast *Saccharomyces cerevisiae*.
 
-</center>
-""", unsafe_allow_html=True)
+A **gRNA** is a short 20-base DNA sequence used in CRISPR experiments to guide the Cas9 enzyme to a specific location in the genome.
 
+### How it works
+1. Paste a **DNA sequence** into the input box below.
+2. The tool scans the sequence and extracts all possible **20-bp gRNA candidates**.
+3. Each candidate is compared with a **precomputed dataset (~893k gRNAs)**.
+4. The tool predicts the **off-target risk level**:
+   - 🟢 **Low Risk** – Safer for genome editing  
+   - 🟡 **Medium Risk** – Moderate off-target possibility  
+   - 🔴 **High Risk** – Higher chance of unintended edits
+
+### What you will get
+A table showing:
+- the **20-bp gRNA sequence**
+- its **predicted off-target risk level**
+
+You can also **download the results as a CSV file** for further analysis.
+""")
 st.divider()
 
 
