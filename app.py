@@ -8,7 +8,8 @@ st.set_page_config(
 )
 
 # Load lookup table
-df = pd.read_csv("grna_risk_lookup.csv.gz")
+# Load compressed dataset
+df = pd.read_csv("grna_risk_lookup.csv.gz", compression="gzip")
 
 lookup = dict(zip(df["gRNA"], df["risk_level"]))
 
